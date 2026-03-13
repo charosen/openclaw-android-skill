@@ -48,7 +48,11 @@ openclaw gateway --port 18789 --verbose
 ### 4. App 连接
 
 1. 打开 App → Connect 标签
-2. 手动输入：Host `192.168.x.x`、Port `18789`
+2. 扫描主机上的配对 QR 码：
+   ```bash
+   openclaw qr
+   ```
+   或手动输入：Host `192.168.x.x`、Port `18789`
 3. 获取配对码
 
 ### 5. 批准配对（主机）
