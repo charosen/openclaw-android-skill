@@ -63,49 +63,60 @@
 
 ---
 
-## 三、安装方式
+## 三、从源代码构建安装
 
-### 3.1 方式一：GitHub Releases 下载（推荐）
+OpenClaw Android App **没有发布到 GitHub Releases 或 Google Play Store**，需要从源代码构建。
 
-1. 打开 GitHub Releases 页面：
-   ```
-   https://github.com/openclaw/openclaw/releases
-   ```
+### 3.1 环境要求
 
-2. 找到 Android APK 文件（命名格式：`openclaw-android-x.x.x.apk`）
+| 要求 | 说明 |
+|------|------|
+| **JDK** | JDK 17+ |
+| **Android SDK** | ~/Library/Android/sdk (macOS 默认) |
+| **Node.js** | 22+ (用于 pnpm) |
+| **pnpm** | 包管理器 |
 
-3. 下载到电脑，然后传输到平板：
-   - 微信/QQ 文件传输助手
-   - 数据线拷贝
-   - 网盘（小米云盘等）
-
-4. 在平板的**文件管理** → **下载**文件夹找到 APK 点击安装
-
-### 3.2 方式二：Google Play Store
-
-如果平板安装了 Google Play Store，搜索 "OpenClaw" 直接安装。
-
-### 3.3 方式三：本地构建 APK
-
-如需最新开发版，可从源码构建：
+### 3.2 构建步骤
 
 ```bash
-# 克隆仓库
+# 1. 克隆仓库
 git clone https://github.com/openclaw/openclaw.git
 cd openclaw
 
-# 构建 Debug 版 APK
+# 2. 安装依赖
+pnpm install
+
+# 3. 构建 Debug 版 APK
 cd apps/android
 ./gradlew :app:assembleDebug
-
-# APK 输出位置
-# apps/android/app/build/outputs/apk/debug/
 ```
 
-**环境要求：**
-- JDK 17+
-- Android SDK
-- Node.js 22+ (pnpm)
+### 3.3 安装 APK
+
+构建完成后，APK 位于：
+```
+apps/android/app/build/outputs/apk/debug/
+```
+
+传输到平板安装：
+- 微信/QQ 文件传输助手
+- 数据线拷贝
+- 网盘
+
+### 3.4 构建命令参考
+
+```bash
+cd apps/android
+
+# 构建 Debug 版 APK
+./gradlew :app:assembleDebug
+
+# 安装到设备（需 USB 调试）
+./gradlew :app:installDebug
+
+# 运行单元测试
+./gradlew :app:testDebugUnitTest
+```
 
 ---
 
