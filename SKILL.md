@@ -24,11 +24,14 @@ cd openclaw/apps/android
 
 # 2. 构建 Debug 版 APK（项目自带 Gradle）
 ./gradlew :app:assembleDebug
+
+# 3. 安装到设备（需 USB 调试开启）
+./gradlew :app:installDebug
 ```
 
 APK 位于：`app/build/outputs/apk/debug/`
 
-传输到平板安装（微信/QQ文件传输、数据线、网盘）。
+或直接通过 USB 调试安装（无需手动传输）。
 
 ### 2. 平板设置
 
