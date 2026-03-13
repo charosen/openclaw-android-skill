@@ -111,8 +111,7 @@ openclaw logs --follow
 ## 参考资料
 
 - **完整安装教程**：参见 [installation-guide.md](references/installation-guide.md)
-- **完整技术文档**：参见 [2026-03-12-android-app-tutorial.md](references/2026-03-12-android-app-tutorial.md)（技术栈、项目结构、Android Studio 开发、热重载、性能测试）
-- **GitHub README 中文**：参见 [2026-03-12-android-readme-cn.md](references/2026-03-12-android-readme-cn.md)
+- **开发者指南**：参见 [developer-guide.md](references/developer-guide.md)
 - **故障排除**：参见 [troubleshooting.md](references/troubleshooting.md)
 - **官方文档**：https://docs.openclaw.ai/platforms/android
 - **Nodes 文档**：https://docs.openclaw.ai/nodes
