@@ -82,7 +82,7 @@ openclaw nodes status
 1. 两台设备安装 Tailscale，登录同一账号
 2. 主机：`openclaw configure set gateway.bind tailnet`
 3. 获取 Tailscale IP：`tailscale ip -4`
-4. 平板 App 连接使用 Tailscale IP
+4. 平板 App 连接使用 Tailscale IP（如果 Gateway 启用了 TLS，需打开 TLS 开关）
 
 ---
 

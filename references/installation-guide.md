@@ -319,6 +319,9 @@ tailscale ip -4
 在 App 中：
 - Host: 主机的 **Tailscale IP**
 - Port: `18789`
+- TLS: 根据 Gateway 配置（如果启用了 TLS 则打开）
+
+**注意**：如果 Gateway 配置了 TLS，连接时需要启用 TLS 开关，使用 `wss://` 协议。
 
 ---
 
